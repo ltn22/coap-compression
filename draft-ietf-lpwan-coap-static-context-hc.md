@@ -34,7 +34,7 @@ normative:
   rfc7252:
   rfc7967:
   rfc7641:
-  I-D.toutain-lpwan-ipv6-static-context-hc:
+  I-D.lpwan-lpwan-ipv6-static-context-hc:
 
 --- abstract
 
@@ -44,8 +44,9 @@ CoAP header structure differs from IPv6 and UDP protocols since the CoAP Header
 is flexible header with a variable number of options themself of a variable length. 
 Another important difference is 
 the asymmetry in the header information used for request and 
-response messages. This draft takes into account the fact that a thing can play the
-role of a CoAP client, a CoAP client or both roles.
+response messages. Most of the compression mechanisms have been introduced in 
+{{I-D.lpwan-lpwan-ipv6-static-context-hc}}, this document explain how to use them
+for CoAP.
 
 --- middle
 
