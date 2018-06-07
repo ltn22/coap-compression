@@ -57,7 +57,7 @@ devices.  Nevertheless, if limited, the size of a CoAP header may be
    too large for LPWAN constraints and some compression may be
    needed to reduce the header size. 
    
-{{I.D-ietf-lpwan-ipv6-static-context-hc}} defines a header compression
+{{I.D.ietf-lpwan-ipv6-static-context-hc}} defines a header compression
    mechanism for LPWAN network based on a static context. The context is
    said static since the field description composing the Rules and the context are not
    learned during the packet exchanges but are previously defined.  The
