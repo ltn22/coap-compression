@@ -85,17 +85,17 @@ devices.  Nevertheless, if limited, the size of a CoAP header may be
   request and in the response, only the location in the header may vary 
   (e.g. source and destination fields). A CoAP request is different from a response. 
   For example, the URI-path option is mandatory in the request and is not found in the response, 
-  a request may contain an Accept option and the response a Content-format option.
+  a request may contain an Accept option and the response a Content option.
   
   Even when a field is "symmetric" (i.e. found in both directions) the values carried are
-  different. For instance the Type field will contain a CON value in the request and a
+  different. For instance the Type field may contain a CON value in the request and a
   ACK or RST value in the response. Exploiting the asymmetry in compression will allow to 
   send no bit in the compressed request and a single bit in the answer. Same behavior can be 
   applied to the CoAP Code field (O.OX code are present in the request and Y.ZZ in the answer).
 
 * CoAP also obeys to the client/server paradigm and the compression rate can
   be different if the request is issued from an LPWAN node or from an non LPWAN
-  device. For instance a Thing (ES) aware of LPWAN constraints can generate a 1 byte token, but
+  device. For instance a device (Dev) aware of LPWAN constraints can generate a 1 byte token, but
   a regular CoAP client will certainly send a larger token to the Thing. SCHC compression
   will not modify the values to offer a better compression rate. Nevertheless a proxy placed
   before the compressor may change some field values to offer a better compression rate and 
@@ -106,18 +106,19 @@ devices.  Nevertheless, if limited, the size of a CoAP header may be
   systematically, the CoAP options are described using the Type-Length-Value. 
   When applying SCHC header compression.
   
+  <!--
   By sending compressed field information following the rule order, 
   SCHC offers a serialization/deserialization mechanism. 
   Since a field exists to indicate the token length there is no ambiguity. 
   For options, the rule indicates also the expected options found the int CoAP header. 
   Therefore only the length is needed to recognize an option. 
   The length will be sent using the same CoAP encoding (size less than 12 are directly sent, 
-  higher values use the escape mechanisms defined by {{rfc7252}}). 
+  higher values use the escape mechanisms defined by {{I.D-ietf-lpwan-ipv6-static-context-hc}}). 
   Delta Type is omitted, the value will be recovered by the decompressor. 
   This reduces the option length of 4, 12 or 20 bits regarding the original size of the delta type encoding in the option.
+-->
   
-* In CoAP headers a field can be duplicated several times, for instances, elements of an URI (path or queries) or accepted 
-formats. The position defined in a rule, associated to a Field ID, can be used to identify the proper element.
+* In CoAP headers a field can be duplicated several times, for instances, elements of an URI (path or queries). The position defined in a rule, associated to a Field ID, can be used to identify the proper element.
 
 <!--
 ## Exploiting CoAP asymetry
