@@ -45,7 +45,7 @@ is flexible header with a variable number of options themself of a variable leng
 Another important difference is 
 the asymmetry in the header information used for request and 
 response messages. Most of the compression mechanisms have been introduced in 
-{{ietf-lpwan-ipv6-static-context-hc}}, this document explains how to use the SCHC compression
+{{I-D.ietf-lpwan-ipv6-static-context-hc}}, this document explains how to use the SCHC compression
 for CoAP.
 
 --- middle
@@ -57,7 +57,7 @@ devices.  Nevertheless, if limited, the size of a CoAP header may be
    too large for LPWAN constraints and some compression may be
    needed to reduce the header size. 
    
-{{I.D.ietf-lpwan-ipv6-static-context-hc}} defines a header compression
+{{I-D.ietf-lpwan-ipv6-static-context-hc}} defines a header compression
    mechanism for LPWAN network based on a static context. The context is
    said static since the field description composing the Rules and the context are not
    learned during the packet exchanges but are previously defined.  The
