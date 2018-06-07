@@ -34,7 +34,7 @@ normative:
   rfc7252:
   rfc7967:
   rfc7641:
-  I-D.lpwan-lpwan-ipv6-static-context-hc:
+  I-D.lpwan-ipv6-static-context-hc:
 
 --- abstract
 
