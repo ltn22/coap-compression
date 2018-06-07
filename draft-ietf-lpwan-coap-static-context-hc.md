@@ -45,7 +45,7 @@ is flexible header with a variable number of options themself of a variable leng
 Another important difference is 
 the asymmetry in the header information used for request and 
 response messages. Most of the compression mechanisms have been introduced in 
-{{I-D.lpwan-lpwan-ipv6-static-context-hc}}, this document explain how to use them
+{{I-D.lpwan-ipv6-static-context-hc}}, this document explain how to use them
 for CoAP.
 
 --- middle
@@ -61,7 +61,7 @@ Nevertheless, if limited, the size of a CoAP header may be
    too large for LPWAN constraints and some compression may be
    needed to reduce the header size. 
    
-{{I-D.toutain-lpwan-ipv6-static-context-hc}} defines a header compression
+{{I-D.lpwan-ipv6-static-context-hc}} defines a header compression
    mechanism for LPWAN network based on a static context. The context is
    said static since the field description composing the Rules and the context are not
    learned during the packet exchanges but are previously defined.  The
