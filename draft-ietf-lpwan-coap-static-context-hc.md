@@ -45,7 +45,7 @@ is flexible header with a variable number of options themself of a variable leng
 Another important difference is 
 the asymmetry in the header information used for request and 
 response messages. Most of the compression mechanisms have been introduced in 
-{{I.D-ietf-lpwan-ipv6-static-context-hc}}, this document explain how to use them
+{{I.D-ietf-lpwan-ipv6-static-context-hc}}, this document explains how to use the SCHC compression
 for CoAP.
 
 --- middle
@@ -53,11 +53,7 @@ for CoAP.
 # Introduction {#Introduction}
 
 CoAP {{rfc7252}} is an implementation of the REST architecture for constrained 
-devices. A Gateway
-between CoAP and HTTP can be easily built since both protocols uses the same
-address space (URL), caching mechanisms and methods.
-
-Nevertheless, if limited, the size of a CoAP header may be
+devices.  Nevertheless, if limited, the size of a CoAP header may be
    too large for LPWAN constraints and some compression may be
    needed to reduce the header size. 
    
@@ -68,17 +64,17 @@ Nevertheless, if limited, the size of a CoAP header may be
    context(s) is(are) known by both ends before transmission. 
   
    A context is composed of a set of rules that are referenced by Rule IDs 
-   (identifiers).  A rule contains an ordered list of the fields descriptions containing à field ID (FID) 
-   and its position when repeated, a direction indicator (DI) (upstream, downstream and bidirectional)
+   (identifiers).  A rule contains an ordered list of the fields descriptions containing à field ID (FID), its length (FL)
+   and its position (FP) when repeated differs from 1, a direction indicator (DI) (upstream, downstream and bidirectional)
    and some associated Target Values (TV) which are expected in the message header. A Matching Operator (MO) is
    associated to each header field description. The rule is selected if all the MOs fit
    the TVs.  In that case, a Compression/Decompression Action (CDA)
    associated to each field defines the link between the compressed and
    decompressed value for each of the header fields. 
    
-    This document describes how the rules can be applied to CoAP flows. 
-    Compression of the CoAP header may be done in conjunction with the 
-    above layers or independantly.
+   This document describes how the rules can be applied to CoAP flows. 
+   Compression of the CoAP header may be done in conjunction with the 
+   above layers (IPv6/UDP) or independantly.
     
 
 #  CoAP Compressing
