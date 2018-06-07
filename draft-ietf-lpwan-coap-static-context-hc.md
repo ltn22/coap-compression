@@ -45,7 +45,7 @@ is flexible header with a variable number of options themself of a variable leng
 Another important difference is 
 the asymmetry in the header information used for request and 
 response messages. Most of the compression mechanisms have been introduced in 
-{{I.D-ietf-lpwan-ipv6-static-context-hc}}, this document explains how to use the SCHC compression
+{{ietf-lpwan-ipv6-static-context-hc}}, this document explains how to use the SCHC compression
 for CoAP.
 
 --- middle
